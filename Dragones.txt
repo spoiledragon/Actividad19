@@ -1,0 +1,24 @@
+Leo
+15
+Canine-Wizard
+50
+Spoiled
+23
+High-Dragon
+120
+Krystal
+14
+Teen High-Dragon
+80
+Borrar
+60
+Rock
+20
+Borrar2
+70
+Rock
+2
+Borrar7
+60
+Rock
+1
