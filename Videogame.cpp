@@ -51,6 +51,16 @@ void Videogame::backup()
             archivo << c.getPosX() << endl;
             archivo << c.getPosY() << endl;
             archivo << c.getPuntuacion() << endl;
+
+            auto it = find(civilizaciones.begin(), civilizaciones.end(), c);
+            if (it == civilizaciones.end())
+            {
+                return;
+            }
+            else
+            {
+                it->respaldar_Aldeanos();
+            }
         }
     }
 
@@ -91,17 +101,15 @@ void Videogame::recover()
 
             addCivilization(c);
 
-            /*
             auto it = find(civilizaciones.begin(), civilizaciones.end(), c);
-    if (it == civilizaciones.end())
-    {
-        return nullptr;
-    }
-    else
-    {
-        
-    }
-            */
+            if (it == civilizaciones.end())
+            {
+                return;
+            }
+            else
+            {
+                it->recuperar_Aldeanos();
+            }
         }
     }
 
@@ -309,12 +317,14 @@ void Videogame::last()
 {
     size_t ultimo = size();
     Civilizacion &c = civilizaciones[ultimo - 1];
-    cout << c << endl;
+    //cout << c << endl;
+    c.print();
 }
 void Videogame::first()
 {
     Civilizacion &c = civilizaciones[0];
-    cout << c << endl;
+    //cout << c << endl;
+    c.print();
 }
 
 size_t Videogame::size() { return civilizaciones.size(); }

@@ -1,0 +1,8 @@
+Dragones
+50
+50
+400
+Asesinos
+200
+200
+350

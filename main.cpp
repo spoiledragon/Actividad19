@@ -159,15 +159,14 @@ int main()
         }
 
         else if (opc == "12")
-        {   Civilizacion c1;
+        {
+            Civilizacion c1;
             Civilizacion c2;
             string x;
-            cout<<"Inserte la Civilizacion a trabajar"<<endl;
-            cin>>x;
+            cout << "Inserte la Civilizacion a trabajar" << endl;
+            cin >> x;
             c1.setNombre(x);
             vid1.work(c1);
-
-
         }
 
         else if (opc == "0")
